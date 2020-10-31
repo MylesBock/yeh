@@ -1,0 +1,3 @@
+[submodule "docker/hey"]
+	path = docker/hey
+	url = https://github.com/rakyll/hey.git

@@ -1,0 +1,10 @@
+TODO: fill these in properly (yell at me if you like)
+
+Now that `yeh` is deployed one can go ahead and review the status with:
+ `kubectl get pods -n {{ .Release.Namespace }} -l app.kubernetes.io/name=yeh`
+
+When it's completed one can perform:
+ `kubectl logs -n {{ .Release.Namespace}} \
+    $(kubectl get pods -n {{ .Release.Namespace }} -l app.kubernetes.io/name=yeh -o json | jq -r '.items[].metadata.name')`
+
+To get a summary of what it did
